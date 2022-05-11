@@ -1,6 +1,8 @@
 # Perf Experiments
 
-This is a repo to host pages to run performance tests against them with [PageSpeed Insights](https://pagespeed.web.dev/)
+This is a repo to host pages to run performance tests against them with [PageSpeed Insights](https://pagespeed.web.dev/).
+
+This also serves as a good example of using Astro + Builder.io via our [Qwik API](https://www.builder.io/c/docs/qwik-api)
 
 ## Setup
 

@@ -6,7 +6,7 @@ This also serves as a good example of using Astro + Builder.io via our [Qwik API
 
 ## Setup
 
-If you would like to clone this repo as an example of using Builder.io with Astro and our Qwik API, see [this vide](https://www.loom.com/share/d8f49865120e417f93a6e62c8b29c8b1) for instructions
+If you would like to clone this repo as an example of using Builder.io with Astro and our Qwik API, see [this video](https://www.loom.com/share/d8f49865120e417f93a6e62c8b29c8b1) for instructions
 
 ## Commands
 

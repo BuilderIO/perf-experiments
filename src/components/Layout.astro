@@ -1,9 +1,12 @@
 ---
+import { cacheHeaderValue } from '../constants/cache-header';
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props as Props;
+
+Astro.response.headers.set('Cache-Control', cacheHeaderValue)
 ---
 
 <!DOCTYPE html>
@@ -13,6 +16,7 @@ const { title } = Astro.props as Props;
 	<meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<title>{title}</title>
+  <script async src="https://cdn.builder.io/js/qwik/qwikloader.js"></script>
 </head>
 <body>
 	<slot />

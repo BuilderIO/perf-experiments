@@ -1,0 +1,26 @@
+---
+import Layout from '../components/Layout.astro';
+import { builderPublicKey } from '../constants/builder'
+
+const url = Astro.request.url;
+
+const urlPath = new URL(url).pathname;
+const qwikApiUrl = `https://cdn.builder.io/api/v1/qwik/page?url=${encodeURIComponent(urlPath)}&apiKey=${builderPublicKey}`
+const builderContent = await fetch(qwikApiUrl)
+  .then(res => res.json())
+  .catch(err => {
+    console.warn(err)
+    return null;
+  });
+
+if (!builderContent?.html) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  });
+}
+
+---
+<Layout title={builderContent.data?.title}>
+  <main set:html={builderContent.html} />
+</Layout>

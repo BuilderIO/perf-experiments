@@ -1,0 +1,10 @@
+---
+import Layout from '../components/Layout.astro';
+import { builderPublicKey } from '../constants/builder'
+
+---
+
+<Layout title="Welcome">
+  <builder-component name="page" api-key={builderPublicKey}></builder-component>
+  <script src="https://cdn.builder.io/js/webcomponents" async></script>
+</Layout>

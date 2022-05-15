@@ -1,9 +1,10 @@
 ---
 import Layout from '../components/Layout.astro';
+import { Content as Readme } from '../../readme.md';
 ---
 
 <Layout title="Welcome">
-	<main class="p-8">
-		<h1 class="text-center">Welcome, you made it :)</h1>
+	<main class="p-8 prose">
+		<Readme />
 	</main>
 </Layout>

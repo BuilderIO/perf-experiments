@@ -5,7 +5,8 @@ import { builderPublicKey } from '../constants/builder'
 const url = Astro.request.url;
 
 const urlPath = new URL(url).pathname;
-const qwikApiUrl = `https://cdn.builder.io/api/v1/qwik/page?url=${encodeURIComponent(urlPath)}&apiKey=${builderPublicKey}`
+const qwikApiUrl = `https://cdn.builder.io/api/v1/qwik/page?userAttributes.urlPath=${encodeURIComponent(urlPath)}&apiKey=${builderPublicKey}`
+
 const builderContent = await fetch(qwikApiUrl)
   .then(res => res.json())
   .catch(err => {

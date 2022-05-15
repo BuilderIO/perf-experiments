@@ -22,6 +22,6 @@ if (!builderContent?.html) {
 }
 
 ---
-<Layout title={builderContent.data?.title}>
+<Layout title={builderContent.data?.title || "Builder.io Perf Experiment"}>
   <main set:html={builderContent.html} />
 </Layout>

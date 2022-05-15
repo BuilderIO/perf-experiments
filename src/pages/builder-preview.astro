@@ -4,7 +4,11 @@ import { builderPublicKey } from '../constants/builder'
 
 ---
 
-<Layout title="Welcome">
-  <builder-component name="page" api-key={builderPublicKey}></builder-component>
+<Layout title="Builder.io Preview page">
+  <builder-component name="page" api-key={builderPublicKey}>
+    <div class="text-center p-10">
+      This is a preview page for use in the Builder.io visual editor
+    </div>
+  </builder-component>
   <script src="https://cdn.builder.io/js/webcomponents" async></script>
 </Layout>
